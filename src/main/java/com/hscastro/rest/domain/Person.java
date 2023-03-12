@@ -37,6 +37,8 @@ public class Person implements Serializable {
 	@Column(name = "rg", nullable = true, length = 11)
 	private String rg;
 	
+	@Column(name = "sexo", nullable = true, length = 50)
+	private String sexo;	
 		
 	@Column(name = "celular", nullable = true, length = 30)
 	private String celular;

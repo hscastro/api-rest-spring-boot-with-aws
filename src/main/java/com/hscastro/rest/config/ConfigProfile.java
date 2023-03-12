@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Profile;
 import com.hscastro.rest.services.DBService;
 	
 
-@Profile("test")
+@Profile("dev")
 @Configuration
 public class ConfigProfile {
 

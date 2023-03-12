@@ -27,6 +27,8 @@ class PersonServiceTest {
 	private static final String CELULAR = "9 99999990";
 
 	private static final String RG = "88888888880";
+	
+	private static final String SEXO = "masculino";
 
 	private static final String CPF = "99999999990";
 
@@ -48,7 +50,7 @@ class PersonServiceTest {
 	@BeforeEach
 	void setUpMocks() throws Exception {
 		input = new MockPerson();
-		person = new Person(ID, FIRST_NAME_TEST0, CPF, RG, CELULAR, null);
+		person = new Person(ID, FIRST_NAME_TEST0, CPF, SEXO, RG, CELULAR, null);
 		MockitoAnnotations.openMocks(this);
 	}
 	
@@ -64,6 +66,7 @@ class PersonServiceTest {
 		assertEquals(ID, response.getId());
 		assertEquals(FIRST_NAME_TEST0, response.getName());
 		assertEquals(CPF, response.getCpf());
+		assertEquals(SEXO, response.getSexo());
 		assertEquals(RG, response.getRg());
 		assertEquals(CELULAR, response.getCelular());
 		assertNotNull(response);		
@@ -82,6 +85,7 @@ class PersonServiceTest {
 		assertEquals(ID, response.get(0).getId());
 		assertEquals(FIRST_NAME_TEST0, response.get(0).getName());
 		assertEquals(CPF, response.get(0).getCpf());
+		assertEquals(SEXO, response.get(0).getSexo());
 		assertEquals(RG, response.get(0).getRg());				
 		assertEquals(CELULAR, response.get(0).getCelular());
 	}
